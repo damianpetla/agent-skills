@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Harness"
+  short_description: "Audit and improve project-specific agent delivery loops"
+policy:
+  allow_implicit_invocation: false
