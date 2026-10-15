@@ -37,3 +37,7 @@ ln -s "$(pwd)/skills/project-harness" ~/.agents/skills/project-harness
 ```
 
 Invoke the skill in Codex with `$project-harness`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
