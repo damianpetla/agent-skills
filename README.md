@@ -23,6 +23,23 @@ file. Include supporting files when the skill needs them.
 
 ## Installation and updates
 
+### Install directly from GitHub in Codex
+
+Paste this prompt into Codex:
+
+```text
+Use $skill-installer to install project-harness from https://github.com/damianpetla/agent-skills/tree/main/skills/project-harness
+```
+
+The installer downloads the skill and its supporting files; you do not need to
+clone this repository. The skill will be available on your next turn. Invoke it
+with `$project-harness`.
+
+This installs a snapshot; later GitHub changes are not applied automatically.
+For a Git-managed installation, use the symlink setup below.
+
+### Install from a local clone
+
 This repository is the source of truth for versioned skills. Symlink a skill
 into the agent's skills directory so repository changes are available directly,
 without synchronizing copies. Keep the repository at the linked location.
