@@ -1,14 +1,14 @@
 # Agent Skills
 
-Moje skille dla agentów programistycznych.
+My skills for coding agents.
 
-## Dostępne skille
+## Available skills
 
-| Skill | Zastosowanie |
+| Skill | Purpose |
 | --- | --- |
-| [project-harness](skills/project-harness/SKILL.md) | Audyt i usprawnianie instrukcji, narzędzi, środowisk i weryfikacji w projekcie. |
+| [project-harness](skills/project-harness/SKILL.md) | Audit and improve project instructions, tools, environments, and verification. |
 
-## Struktura
+## Structure
 
 ```text
 skills/
@@ -18,20 +18,22 @@ skills/
     └── references/
 ```
 
-Każdy kolejny skill trafia do osobnego katalogu `skills/<nazwa>/` z plikiem
-`SKILL.md`. Dodatkowe pliki dodawaj wtedy, gdy dany skill ich potrzebuje.
+Add each new skill in its own `skills/<name>/` directory with a `SKILL.md`
+file. Include supporting files when the skill needs them.
 
-## Używanie i aktualizacje
+## Installation and updates
 
-Repozytorium jest źródłem wersjonowanych skilli. Instalacje w katalogach
-agentów są osobnymi kopiami; zmiany w repozytorium przenoś do nich świadomie.
+This repository is the source of truth for versioned skills. Symlink a skill
+into the agent's skills directory so repository changes are available directly,
+without synchronizing copies. Keep the repository at the linked location.
 
-Przy pierwszej instalacji `project-harness` w Codexie, gdy katalog docelowy
-jeszcze nie istnieje, uruchom z głównego katalogu repozytorium:
+To install `project-harness` in Codex, run these commands from the repository
+root. The destination path must not already exist; move an existing installation
+to a backup location first.
 
 ```sh
 mkdir -p ~/.agents/skills
-cp -R skills/project-harness ~/.agents/skills/project-harness
+ln -s "$(pwd)/skills/project-harness" ~/.agents/skills/project-harness
 ```
 
-Wywołanie w Codexie: `$project-harness`.
+Invoke the skill in Codex with `$project-harness`.
